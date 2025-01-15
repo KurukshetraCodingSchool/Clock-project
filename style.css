@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.clock{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    position: relative;
+    border-radius: 50%;
+    scale: 2;
+}
+.needle{
+    width: 3px;
+    background-color: rgb(80, 100, 93);
+    position: absolute;
+    top: 50%;
+    left:50%;
+
+
+}
+.needle.hour{
+    transform: translate(-50% , -100%) rotate(0deg);
+}
+.needle.minute{
+    transform: translate(-50% , -100%) rotate(0deg);
+    height: 100px;
+}
+.needle.second{
+    transform: translate(-50% , -100%) rotate(0deg);
+    height: 100px;
+    background-color: black;
+}
+.center_point{
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    border-radius: 50%;
+}
+.center_point::after{
+    content: "";
+    background-color: blue;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+}
+
+.date{
+color: #aaa;
+text-transform: uppercase;
+}

@@ -7,20 +7,38 @@
 html,body{
     width: 100%;
     height: 100%;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column; */
+}
+
+.toggle{
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    width: 120px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
 }
 main{
    display: flex;
    flex-direction: column;
-   justify-content: space-between;
+justify-content: center;
+   height: 100%;
    align-items: center;
+   gap: 100px;
+   width: 100%;
+
 }
 
 .clock{
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     background-color: aqua;
     position: relative;
     border-radius: 50%;
@@ -31,23 +49,26 @@ main{
     position: absolute;
     top: 50%;
     left:50%;
+    background-color: black;
+    transition: all 0.5 ease-in linear;
+    transform-origin:bottom center ;
 
 
 }
 .needle.hour{
     transform: translate(-50% , -100%) rotate(0deg);
-    /* height: 40px; */
-    background-color: red;
+    height: 80px;
+
 }
 .needle.minute{
     transform: translate(-50% , -100%) rotate(0deg);
-    /* height: 60px; */
-    background-color: blue;
+    height: 100px;
+
 }
 .needle.second{
     transform: translate(-50% , -100%) rotate(0deg);
-    height: 80px;
-    background-color: black;
+    height: 110px;
+    background-color: rgb(174, 48, 48);
 }
 .center_point{
     width: 10px;
@@ -71,14 +92,16 @@ main{
     border-radius: 50%;
 }
 
-.time{
+.time,.date{
     color: red;
     position: absolute;
-    top: 90%;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-weight: 900;
+    font-size: 20px;
 }
 .date{
-color: red;
-text-transform: uppercase;
-position: absolute;
-top:80%;
+    top: 91%;
 }
